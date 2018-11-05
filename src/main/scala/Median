@@ -2,13 +2,7 @@ import scala.collection.mutable.ListBuffer
 
 object Median {
   def findMedian[T](seq: Seq[T]): Double = {
-
-    var listDouble:ListBuffer[Double] = new ListBuffer[Double]
-    for(m<-seq) {
-      listDouble += m.toString.toDouble
-    }
-    listDouble.sorted
-
+    val listDouble = seq.map(x => toString.toDouble)
     val len:Int = seq.length
     if (len%2 == 0) {
       (listDouble(len/2) + listDouble((len/2)-1))/2
