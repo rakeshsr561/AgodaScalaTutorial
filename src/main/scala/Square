@@ -1,0 +1,25 @@
+object Square {
+
+  def squareList(xs: List[Int]): List[Int] = xs match {
+    case List() => xs
+    case y :: ys => y * y::squareList(ys)
+  }
+
+  def squareList1(xs: List[Int]): List[Int] = {
+    xs map (x=>x*x)
+  }
+
+  def main(args: Array[String]): Unit = {
+    var l:List[Int] = squareList(List(1,2,3,4))
+    var lm:List[Int] = squareList(List(1,2,3,4))
+    for(j<-l) {
+      println(j)
+    }
+
+    for(j<-lm) {
+      println(j)
+    }
+  }
+
+
+}

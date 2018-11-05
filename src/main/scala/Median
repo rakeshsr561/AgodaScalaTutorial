@@ -1,0 +1,23 @@
+import scala.collection.mutable.ListBuffer
+
+object Median {
+  def findMedian[T](seq: Seq[T]): Double = {
+
+    var listDouble:ListBuffer[Double] = new ListBuffer[Double]
+    for(m<-seq) {
+      listDouble += m.toString.toDouble
+    }
+    listDouble.sorted
+
+    val len:Int = seq.length
+    if (len%2 == 0) {
+      (listDouble(len/2) + listDouble((len/2)-1))/2
+    } else {
+      listDouble(len/2)
+    }
+  }
+
+  def main(args: Array[String]): Unit = {
+    println(findMedian(Seq(1.0,2.2,3.2,4.1,5.2,6.3)))
+  }
+}

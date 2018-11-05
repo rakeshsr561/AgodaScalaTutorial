@@ -1,0 +1,21 @@
+import org.scalatest.FunSuite
+
+
+
+class StringOperationTest extends FunSuite {
+
+  test("longest word") {
+    val result = StringOperations.longestWord("hi rak hi aree u")
+    assert(result == "aree")
+  }
+
+  test("most common word") {
+    val result = StringOperations.mostCommonWord("hi rah hi rah rah hi a a a")
+    assert(result == "aree")
+  }
+
+  test("most frequent letter") {
+    val result = StringOperations.mostFrequntLetter("hi rah hi rah rah hi a a a  a bbbbbbbbbbbbbbb")
+    assert(result == 'b')
+  }
+}
